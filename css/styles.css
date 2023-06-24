@@ -1,0 +1,151 @@
+/* some constants */
+:root {
+    --theme: rgb(29, 30, 34);
+    --background-theme: whitesmoke;
+    --text-theme: #444857;
+}
+
+body {
+    background-color: var(--background-theme);
+}
+
+body,
+body * {
+    color: var(--text-theme);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+}
+
+/* page title */
+h1 {
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    max-height: 390px !important;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+#tabs {
+    max-height: 250px;
+}
+
+.content-wrapper {
+    box-sizing: border-box;
+}
+
+tr.slider-row > td.slider-cell {
+    padding: 4px 4px 16px 4px;
+}
+
+/* center items on page */
+#input-table,
+.results,
+#results, 
+#tabs {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#input-table {
+    padding: 8px 0;
+}
+
+form {
+    border: 1px solid var(--text-theme);
+    height: 100%;
+}
+
+#input-table * td.input-cell, #input-table * td.label-cell {
+    white-space: nowrap;
+    padding: 4px;
+}
+
+#input-table * td.label-cell {
+    vertical-align: text-top;
+}
+
+label.error {
+    display: block;
+    color: red;
+    padding: 2px 0 0 0;
+    font-size: 10px;
+}
+
+.instructions {
+    text-align: center;
+    white-space: nowrap;
+    width: 200px;
+    margin: 0 auto;
+    padding: 4px;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+span.btn-wrapper {
+    width: 100%;
+}
+
+/* button size for generating table */
+.gen-btn {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* For scrollable container */
+#content * table.results, #results, #tabs {
+    width: 100%;
+    overflow: scroll;
+    display: block;
+    padding: 0 8px 8px 0;
+}
+div#tabs * table.results {
+    width: 100%;
+    display: block;
+    padding: 0 8px 8px 0;
+}
+
+.content-wrapper,
+#results {
+    margin: 4px;
+}
+
+#results * {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 1px solid black;
+}
+
+.results * th,
+.results * td {
+    padding: 0 5px;
+}
+
+.results * th {
+    color: var(--background-theme);
+    background-color: var(--text-theme);
+}
+
+.results * tr:nth-child(2n) {
+    background-color: lightgrey;
+}
+
+.results * th#omitted {
+    background-color: var(--background-theme);
+    border: 1px solid var(--background-theme);
+}
+
+#minRowValid,
+#maxRowValid,
+#minColValid,
+#maxColValid {
+    color: red;
+    font-size: 8px;
+}

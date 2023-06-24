@@ -1,0 +1,117 @@
+<!--
+File: index.html
+HW4
+Brian Cox, UMass Lowell Computer Science, brian_cox1@student.uml.edu
+Copyright (c) 2023 by Brian. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Created by BC on June 17, 2023 at 12:00 PM.
+Updated by BC on June 24, 2023 at 10:31 AM.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiplication Table</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+        integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <h1>Multiplication table</h1>
+    <div id="content">
+        <div class="content-wrapper col-xs-12 col-md-6">
+            <form id="inputForm">
+                <table id="input-table">
+                    <tbody>
+                        <tr class="form-group-row">
+                            <td colspan="3">
+                                <span class="instructions">
+                                    Enter Table Ranges
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="minRowLabel" for="minRow" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input type="number" id="minRow" name="minRow" required>
+                            </td>
+                        </tr>
+                        <tr class="slider-row">
+                            <td colspan="3" class="slider-cell">
+                                <div id="minRowSlider"></div>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="maxRowLabel" for="maxRow" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input type="number" id="maxRow" name="maxRow" required>
+                            </td>
+                        </tr>
+                        <tr class="slider-row">
+                            <td colspan="3" class="slider-cell">
+                                <div id="maxRowSlider"></div>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="minColLabel" for="minCol" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input type="number" id="minCol" name="minCol" required>
+                            </td>
+                        </tr>
+                        <tr class="slider-row">
+                            <td colspan="3" class="slider-cell">
+                                <div id="minColSlider"></div>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="maxColLabel" for="maxCol" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input type="number" id="maxCol" name="maxCol" required>
+                            </td>
+                        </tr>
+                        <tr class="slider-row">
+                            <td colspan="3" class="slider-cell">
+                                <div id="maxColSlider"></div>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td colspan="2">
+                                <button type="submit" id="submit" onclick="saveTab(event);" class="gen-btn">Save Table</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div id="results" class="col-xs-12 col-md-6"></div>
+    </div>
+    <div id="tabs" class="col-xs-12">
+        <ul></ul>
+    </div>
+</body>
